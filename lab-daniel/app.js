@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { say } from 'cowsay';
+import faker from 'faker';
+
 
 class App extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            header: 'Cowsay!',
+            cow: say({text: faker.hacker.phrase()})
+        }
     }
     
-    render() {
+    render() { 
+        console.log(say({ text: 'grazing in the browser' }));
         return (<div>
-            <h1>My React App</h1>
+            <h1>{this.state.header}</h1>
+            <pre>{this.state.cow}</pre>
         </div>)
     }
 }
