@@ -1,8 +1,8 @@
+// import './style/main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style.css';
 import faker from 'faker';
-import cowsay from 'cowsay';
+import { say } from 'cowsay';
 
 class ClickCounter extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class App extends React.Component {
     this.state = {
       name: "My React App",
       admin: faker.internet.email(),
-      content: cowsay.say({text: faker.hacker.phrase()})
+      content: say({text: faker.hacker.phrase()})
     }
   }
 
