@@ -7,19 +7,25 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      initialCow: say({text: faker.hacker.phrase()})
+      heading: 'Generate Cowsay Lorem',
+      content: say({text: faker.hacker.phrase()})
     }
-    // this.randomCow = this.randomCow.bind(this);
+    this.randomComment = this.randomComment.bind(this);
   }
-  // randomCow() {
-  //   this.setState(state => {
-  //     let cowArt = cowsay.say({text: 'random comment'});
-  //     return {cow: cowArt};
-  //   });
-  // }
+
+  randomComment() {
+    this.setState(state => {
+      let newComment = faker.hacker.phrase();
+      console.log('new comment', newComment);
+      return {content: say({text: newComment})};
+    });
+  }
+
   render() {
     return <div>
-      <pre>{this.state.initialCow}</pre>
+      <h1>{this.state.heading}</h1>
+      <button onClick={this.randomComment}>Click Me</button>
+      <pre>{this.state.content}</pre>
       </div>
   }
 };
