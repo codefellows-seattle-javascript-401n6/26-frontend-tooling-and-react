@@ -24,21 +24,21 @@ Your lab directory must include
 * **.babelrc** -- with all dependencies and dev-dependencies 
 * **package.json** -- with all dependencies and dev-dependencies 
 * **webpack.config.js** -- with webpack config
-* **src/** -- conating the frontend code
-* **src/main.js** -- containing the entire app
-* **src/style** -- containing your sass
-* **src/style/main.scss** -- containing the frontend code
+* **app.js** -- containing the entire app
+* **style.css** -- containing your styling
  
 #### Feature Tasks  
 Create the following component
 ###### App
+* Creat a component called `App`
 * Should contain the entire application's view and state
 * Should have a property on the state called content 
 * Should create a view with the following display
   * A heading with the title "Generate Cowsay Lorem"
   * A Button that displays "click me"
-    * `onClick` the button should generate new content on the app state using cowsay and faker
-  * A pre tag that displays the App's state's content 
+    * `onClick` the button should generate new content on the app state using
+      the `cowsay` and `faker` npm modules
+  * A `<pre>` tag that displays the App's state's content 
 
 ####  Documentation  
 Write a description of the project in your README.md
