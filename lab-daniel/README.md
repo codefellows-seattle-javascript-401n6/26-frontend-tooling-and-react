@@ -15,5 +15,6 @@ Click the "Click Me" Button to generate a new Cowsay with random lorem ipsum gen
 - faker: ^4.1.0
 - react: ^16.3.2
 - react-dom: ^16.3.2
+- style-loader: ^0.20.3
 - webpack
 - webpack-cli

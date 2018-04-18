@@ -9,8 +9,9 @@ const config = {
     },
     module: {
         rules: [
-            {test: /\.js$/, loader: 'babel-loader'}
+            {test: /\.js$/, loader: 'babel-loader'},
         ]
+
     }
 };
 

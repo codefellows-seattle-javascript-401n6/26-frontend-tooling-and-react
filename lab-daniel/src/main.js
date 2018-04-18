@@ -23,7 +23,7 @@ class App extends React.Component {
     
     render() { 
         console.log(say({ text: 'grazing in the browser' }));
-        return (<div>
+        return (<div className="App">
             <h1>{this.state.header}</h1>
             <button onClick={this.handleClick}>Click Me</button>
             <pre>{this.state.content}</pre>
