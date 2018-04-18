@@ -50,7 +50,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "My Cowsay React App",
+      heading: "Generate Cowsay Lorem",
       admin: faker.internet.email(),
       content: say({text: faker.hacker.phrase()})
     }
@@ -72,7 +72,7 @@ class App extends React.Component {
             return <option value={option.val} key={option.name}>{option.name}</option>;
           })}
         </select>
-      <button onClick={this.handleClick}>Talk to Me!</button>
+      <button onClick={this.handleClick}>Click ME!</button>
       <pre>{`${this.state.content}`}</pre>
     </div>
     );
