@@ -23,43 +23,29 @@ class NavBar extends React.Component {
 
 let test = [{val: DEFAULT, name: 'select'},{val:SQUIRREL, name: 'SQUIRREL'}, {val: MOOSE, name: 'MOOSE'}, {val: REN, name: 'REN'}, {val: SHEEP, name: 'SHEEP'}, {val: BUNNY, name: 'BUNNY'}, {val:DRAGON, name: 'DRAGON'}];
 
-
-class ClickCounter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0
-    }
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick() {
-    this.setState(state => {
-      return {count: state.count + 1};
-    });
-  }
-
-  render() {
-    return <div onClick={this.handleClick}>
-      This has been clicked {this.state.count} times
-    </div>
-  }
-}
-
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       heading: "Generate Cowsay Lorem",
-      admin: faker.internet.email(),
-      content: say({text: faker.hacker.phrase()})
+      content: '',
+      value: 'select',
     }
+    this.handleClick = this.handleClick.bind(this)
   }
 
   onChange(e) {
     this.setState({
       value: e.target.value,
     });
+  }
+
+  handleClick() {
+    this.setState((state) =>
+      ({content: say({
+        text: faker.hacker.phrase(),
+        cow: `${this.state.value}`,
+      })}));
   }
 
   render() {

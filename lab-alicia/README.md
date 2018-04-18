@@ -20,7 +20,8 @@ This is a simple demonstaration of cowsay built using ReactJS components and fro
 
 ## Change Log
 ```
-2018-04-17
-2018-04-16
-2018-04-16
+2018-04-17 Stretch goal working!
+2018-04-17 Add stretch goal and MVP
+2018-04-16 Counter working and cowsay, faker working
+2018-04-16 Configure webpack, babel, and create react components
 ```
