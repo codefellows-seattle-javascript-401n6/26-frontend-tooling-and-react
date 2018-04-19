@@ -12,7 +12,7 @@ const config = {
   module: {
     rules: [
       {test: /\.js$/, loader: 'babel-loader'},
-      {test: /\.js$/, loader: [
+      {test: /\.css/, loader: [
         'style-loader', 'css-loader'//must be this order!
       ]},
     ]
