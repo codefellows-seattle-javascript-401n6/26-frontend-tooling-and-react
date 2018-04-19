@@ -10,7 +10,7 @@ class MyCoolApp extends React.Component { // MyCoolApp is the name of the app
   constructor(props){
     super(props);
     this.state = {
-      content: 'foo',
+      content: 'Welcome to Apple technical support!',
       stuff: []
     }
     this.saySomething = this.saySomething.bind(this);
@@ -19,14 +19,15 @@ class MyCoolApp extends React.Component { // MyCoolApp is the name of the app
   saySomething() {
     this.setState({
       content: say({
-        test: 'bar'
+        text: faker.hacker.phrase()
+        // text: faker.lorem.sentence()
       })
     })
   }
 
   render() { // JSX
     return <div>
-      <h1>Genderate Cowsay Ipsum Lorem</h1>
+      <h1>Genderate Cowsay Technical Support</h1>
       <button onClick={this.saySomething}>click me</button>
       <pre>{this.state.content}</pre>
       </div>;
