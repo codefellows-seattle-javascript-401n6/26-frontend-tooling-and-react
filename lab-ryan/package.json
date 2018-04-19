@@ -1,10 +1,12 @@
 {
-  "name": "26-frontend-tooling-and-react",
+  "name": "webpack-simple",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpak-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "style-loader": "^0.20.3",
-    "webpack": "^4.5.0"
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
   }
 }
