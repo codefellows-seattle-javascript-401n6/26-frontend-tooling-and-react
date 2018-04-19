@@ -25,7 +25,7 @@ class App extends React.Component {
   render() {//MUST use className to avoid conflicts between javascript and HTML
     return <div className="Cowsay">
       <h1>Cowsay Lorem Ipsum</h1>
-      <button onClick={}>Click Me</button>
+      <button onClick={this.saySomething}>Click Me</button>
       <pre>{this.state.content}</pre>
     </div>;
   }
