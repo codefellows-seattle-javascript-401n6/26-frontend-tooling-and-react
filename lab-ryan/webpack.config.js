@@ -11,10 +11,10 @@ const config = {
         rules: [
             {
             test: /\.js$/, 
-            loader: 'bable-loader'
+            loader: 'babel-loader'
             },
             {
-            test: /\.css/, 
+            test: /\.css$/, 
             loader: [
                 'style-loader', 'css-loader'
                 ]
