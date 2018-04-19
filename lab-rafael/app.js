@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import * as cowsay from 'cowsay';
 import {say} from 'cowsay';
 import faker from 'faker';
+import './style.css';
 
 class App extends React.Component {
   constructor(props) {
