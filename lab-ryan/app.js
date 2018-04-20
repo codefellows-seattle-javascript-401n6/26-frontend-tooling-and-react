@@ -9,15 +9,16 @@ class App extends React.Component {
         super(props);
         this.state = {
             content: 'something',
-            stuff: []
+            stuff: [],
         }
         this.saySomething = this.saySomething.bind(this);
     }
 
     saySomething() {
         this.setState({
-            content: 'something else',
-            text: faker.lorem.word
+            content: say ({
+            text: faker.lorem.word() + ' dude'
+            })
         })
     }
 
