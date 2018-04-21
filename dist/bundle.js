@@ -107,19 +107,45 @@ var App = function (_React$Component) {
   function App(props) {
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    _this.state = {
+      name: 'Generate Cowsay Lorem',
+      count: 0
+    };
+    _this.updateCount = _this.updateCount.bind(_this);
+    return _this;
   }
 
   _createClass(App, [{
+    key: 'updateCount',
+    value: function updateCount() {
+      this.setState(function (state) {
+        return { count: state.count + 1 };
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'App' },
         _react2.default.createElement(
           'h1',
           null,
-          'Generate Cowsay Lorem'
+          this.heading
+        ),
+        _react2.default.createElement(
+          'p',
+          { onClick: this.updateCount },
+          'Click Here'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Clicked ',
+          this.state.count,
+          ' times!'
         )
       );
     }
@@ -127,6 +153,8 @@ var App = function (_React$Component) {
 
   return App;
 }(_react2.default.Component);
+
+;
 
 var root = document.getElementById('root');
 _reactDom2.default.render(_react2.default.createElement(App, null), root);
