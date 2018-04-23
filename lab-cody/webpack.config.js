@@ -4,6 +4,7 @@ const path = require('path');
 
 const config = {
   mode: 'development',
+  devtool: 'source-map',
   entry: './app.js',
   output: {
     path: path.resolve(__dirname, './dist'),
