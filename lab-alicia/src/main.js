@@ -32,6 +32,11 @@ class App extends React.Component {
       value: 'select',
     }
     this.handleClick = this.handleClick.bind(this)
+    this.onChange = this.onChange.bind(this)
+  }
+
+  mapOptions(option) {
+    return <option value={option.val} key={option.name}>{option.name}</option>
   }
 
   onChange(e) {
@@ -53,10 +58,10 @@ class App extends React.Component {
     <div className='app'>
       <NavBar />
         <label className='label'>Pick your favorite Animal:</label>
-        <select value={this.state.value} onChange={this.onChange.bind(this)} className="form-control">
-        {test.map(option => {
-            return <option value={option.val} key={option.name}>{option.name}</option>;
-          })}
+        <select value={this.state.value} 
+        onChange={this.onChange} 
+        className="form-control">
+        {test.map(mapOptions)}
         </select>
       <button onClick={this.handleClick}>Click ME!</button>
       <pre>{`${this.state.content}`}</pre>
