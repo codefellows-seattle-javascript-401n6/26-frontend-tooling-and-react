@@ -30,6 +30,6 @@ class App extends React.Component {
     </div>;
   }
 }
-
+// const root = $('#root');//(jquery)???
 const root = document.getElementById('root');
 ReactDOM.render(<App/>, root);
