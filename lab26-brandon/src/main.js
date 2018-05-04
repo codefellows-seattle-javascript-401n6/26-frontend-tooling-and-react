@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style.css';
+import './src/style/style.css';
+import faker from 'faker';
+import {say} from 'cowsay';
 
 class App extends React.Component {
  constructor(props) {
  super(props);
  this.state = {
-     name: "My React App"
+     heading: 'Generate Cowsay Lorem',
+     content : '',
  }
  }
 
