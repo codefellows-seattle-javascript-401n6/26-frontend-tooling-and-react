@@ -1,24 +1,24 @@
 'use strict';
 
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   mode: 'development',
-  entry: './main.js',
+  devtool: 'source-map',
+  entry: './src/main.jsx',
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js'
   },
-  plugins: [new HtmlWebpackPlugin()],
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader'
       },
       {
-        test: '/\.css/',
+        test: /\.s?css$/,
         loader: [
           'style-loader', 'css-loader'
         ]
