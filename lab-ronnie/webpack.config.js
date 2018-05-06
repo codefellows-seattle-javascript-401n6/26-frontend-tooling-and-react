@@ -5,10 +5,10 @@ module.exports = {
   devtool: 'source-map',
   entry: `${__dirname}/src/main.jsx`,
   output: {
-    path:`${__dirname}/dist`, 
-    filename:'bundle-[hash].js'
+    path: `${__dirname}/dist`, 
+    filename: 'bundle-[hash].js'
   },
-  plugins: [new HtmlPlugin ({template: `${__dirname}/index.html`})],
+  plugins: [new HtmlPlugin({template: `${__dirname}/index.html`})],
   module: {
     rules: [
       {test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/},
